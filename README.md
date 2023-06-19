@@ -10,5 +10,9 @@ Este api obtiene la información de los recaudos de un api externo y los guarda 
 Obtener los cambiso de la rama master localmente
 Compilar el proyecto y ejecutar
 
+# Uso
+
+Ver docuemntación de swagger
+
 # Diagrama de componentes
 ![image](https://github.com/sxxor/PruebaTecnica/assets/7612153/c7ca86b6-80b1-4b64-a513-9c0d84ddfefe)
