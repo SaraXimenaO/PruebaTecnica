@@ -1,4 +1,5 @@
 # PruebaTecnica
+Api desarrollado con .net Framework 6
 Este api obtiene la información de los recaudos de un api externo y los guarda en la DB para luego consultarlos y mostrarlos en una tabla y un reprote en pdf
 
 # Requisitos previos
