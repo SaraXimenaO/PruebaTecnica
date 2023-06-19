@@ -21,9 +21,9 @@ Ejemplo para Obtener recaudos
 
       Ejemplo para El reporte
 
-GetReport(date: string): Observable<report[]> {
+´GetReport(date: string): Observable<report[]> {
         return this.http.get<report[]>(`https://localhost:7097/PruebaTecnica/Report/${date}`);
-      }
+      }´
 
 # Diagrama de componentes
 ![image](https://github.com/sxxor/PruebaTecnica/assets/7612153/c7ca86b6-80b1-4b64-a513-9c0d84ddfefe)
