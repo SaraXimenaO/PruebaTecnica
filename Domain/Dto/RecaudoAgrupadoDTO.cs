@@ -8,8 +8,10 @@ namespace Domain.Dto
 {
     public class RecaudoAgrupadoDTO
     {
-       public string Estacion { get; set; }
-       public int valorCant  { get;set; }
-       public int valorTotal { get; set; }
+        public string Estacion { get; set; }
+        public string Fecha { get; set; }
+        public int valorCant { get; set; }
+        public int valorTabulado { get; set; }
+
     }
 }

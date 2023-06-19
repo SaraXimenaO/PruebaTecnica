@@ -11,6 +11,6 @@ namespace Application.Recaudos
     public interface IRecaudos
     {
         Task<List<Recaudo>> GetRecaudos(string Date);
-        Task<List<RecaudoAgrupadoDTO>> GetReport();
+        Task<List<RecaudoAgrupadoDTO>> GetReport(string Date);
     }
 }

@@ -4,6 +4,7 @@ using Domain;
 using Domain.Dto;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace Application.Recaudos
             var RecaudosTemp = await _conteoRecaudo.GetRecaudos(Date, token.token);
             if (RecaudosTemp.Any())
             {
-                _context.Recaudos.RemoveRange();
+                _context.Recaudos.RemoveRange(_context.Recaudos);
                 EntityRecaudos.AddRange(from recaudo in RecaudosTemp
                                         let temp = new Recaudo(recaudo.estacion, recaudo.sentido, recaudo.hora, recaudo.categoria, recaudo.valorTabulado)
                                         select temp);
@@ -40,18 +41,20 @@ namespace Application.Recaudos
             return EntityRecaudos;
         }
 
-        public async Task<List<RecaudoAgrupadoDTO>> GetReport()
-        {
-            return await _context.Recaudos
+        public async Task<List<RecaudoAgrupadoDTO>> GetReport(string Date)
+        {          
+            var entity =  await _context.Recaudos
             .GroupBy(r => r.Estacion)
             .Select(g => new RecaudoAgrupadoDTO
             {
+                Fecha = Date,
                 Estacion = g.Key,
                 valorCant = g.Count(),
-                valorTotal = g.Sum(r => r.ValorTabulado)
-            })
+                valorTabulado = g.Sum(r => r.ValorTabulado),
+                
+        })
             .ToListAsync();
-
+            return entity;
         }
     }
 }
