@@ -13,11 +13,11 @@ Compilar el proyecto y ejecutar
 
 Consumir los endpoints correspondientes 
 
-Ejemplo para Obtener recaudos
-
-  GetRecaudo(date: string): Observable<recaudo[]> {
-        return this.http.get<recaudo[]>(`https://localhost:7097/PruebaTecnica/${date}`);
-      }
+      Ejemplo para Obtener recaudos
+      
+        GetRecaudo(date: string): Observable<recaudo[]> {
+              return this.http.get<recaudo[]>(`https://localhost:7097/PruebaTecnica/${date}`);
+            }
 
       Ejemplo para El reporte
 
