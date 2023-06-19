@@ -16,11 +16,11 @@ builder.Services.AddSwaggerGen(options =>
     {
         Version = "v1",
         Title = "Prueba Tecnica",
-        Description = "Esto es una prueba tecnica",
+        Description = "Api que consulta recaudos de un api externo y los almacena en la DB para luego ser consultados y mostrados en una tabla en una aplicación de angular",
         TermsOfService = new Uri("https://example.com/terms"),
         Contact = new OpenApiContact
         {
-            Name = "Example Contact",
+            Name = "Sara Ortiz",
             Url = new Uri("https://example.com/contact")
         },
         License = new OpenApiLicense

@@ -27,7 +27,7 @@ namespace PruebaTecnica.Controllers
         }
 
         [HttpGet("Report/{date}")]
-        public async Task<ActionResult<List<RecaudoAgrupadoDTO>>> GetReport([FromQuery] string date)
+        public async Task<ActionResult<List<RecaudoAgrupadoDTO>>> GetReport([FromRoute] string date)
         {
             return await _recaudos.GetReport(date);
         }
