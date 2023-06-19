@@ -13,6 +13,8 @@ Compilar el proyecto y ejecutar
 
 Consumir los endpoints correspondientes 
 
+Ejemplos para consumo desde angular
+
       Ejemplo para Obtener recaudos
       
         GetRecaudo(date: string): Observable<recaudo[]> {
